@@ -1,0 +1,18 @@
+name: "graph-entity-relator"
+description: "Maps and queries relationships between code entities, concepts, and project decisions."
+input_schema:
+  type: "object"
+  properties:
+    subject:
+      type: "string"
+      description: "Source entity or subject identifier."
+    predicate:
+      type: "string"
+      description: "Relationship predicate e.g. depends_on, implements, supersedes."
+    object:
+      type: "string"
+      description: "Target entity or object identifier."
+  required:
+    - "subject"
+    - "predicate"
+    - "object"

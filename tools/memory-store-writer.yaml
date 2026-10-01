@@ -1,0 +1,17 @@
+name: "memory-store-writer"
+description: "Ingests and stores atomic memory facts with confidence ratings and semantic tags."
+input_schema:
+  type: "object"
+  properties:
+    content:
+      type: "string"
+      description: "Factual memory statement or architectural decision to store."
+    category:
+      type: "string"
+      description: "Memory domain e.g. architecture, preference, bugfix, constraint."
+    confidence:
+      type: "number"
+      description: "Confidence rating between 0.0 and 1.0 based on verification certainty."
+  required:
+    - "content"
+    - "category"

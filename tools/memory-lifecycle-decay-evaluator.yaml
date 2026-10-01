@@ -1,0 +1,13 @@
+name: "memory-lifecycle-decay-evaluator"
+description: "Evaluates memory retention intervals, applies decay rates, and prunes stale facts."
+input_schema:
+  type: "object"
+  properties:
+    decay_half_life_days:
+      type: "integer"
+      description: "Half-life duration in days for exponential confidence decay."
+    prune_threshold:
+      type: "number"
+      description: "Confidence threshold below which unreinforced memories are archived."
+  required:
+    - "decay_half_life_days"

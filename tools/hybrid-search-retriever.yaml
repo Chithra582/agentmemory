@@ -1,0 +1,16 @@
+name: "hybrid-search-retriever"
+description: "Executes hybrid semantic vector and BM25 lexical search over stored memories."
+input_schema:
+  type: "object"
+  properties:
+    query:
+      type: "string"
+      description: "Search query or task context to retrieve relevant memories for."
+    top_k:
+      type: "integer"
+      description: "Maximum number of memory items to return."
+    min_confidence:
+      type: "number"
+      description: "Minimum confidence score threshold for retrieved results."
+  required:
+    - "query"

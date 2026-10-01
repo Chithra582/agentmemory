@@ -1,0 +1,17 @@
+name: "mcp-hook-bridge"
+description: "Connects with MCP client environments to inject relevant memories into agent sessions."
+input_schema:
+  type: "object"
+  properties:
+    session_id:
+      type: "string"
+      description: "Active MCP client session identifier."
+    current_prompt:
+      type: "string"
+      description: "Incoming user prompt to augment with retrieved memories."
+    token_budget:
+      type: "integer"
+      description: "Maximum token allowance for injected memory context."
+  required:
+    - "session_id"
+    - "current_prompt"

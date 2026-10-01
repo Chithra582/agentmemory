@@ -1,0 +1,64 @@
+spec_version: "0.1.0"
+name: "agentmemory-persistent-engine"
+version: "1.0.0"
+description: >
+  Zero-external-DB persistent memory engine providing hybrid search,
+  knowledge graphs, confidence scoring, and auto-hooks across MCP coding agents.
+author: "Chithra R"
+license: "Apache-2.0"
+
+model:
+  preferred: "claude-3-5-sonnet"
+  fallback:
+    - "gpt-4o"
+    - "gemini-2.0-flash"
+  constraints:
+    temperature: 0.1
+    max_tokens: 8192
+
+skills:
+  - episodic-memory-consolidation
+  - hybrid-vector-bm25-retrieval
+  - confidence-lifecycle-scoring
+  - mcp-auto-hook-intercept
+
+tools:
+  - memory-store-writer
+  - hybrid-search-retriever
+  - graph-entity-relator
+  - memory-lifecycle-decay-evaluator
+  - mcp-hook-bridge
+
+runtime:
+  max_turns: 25
+  temperature: 0.1
+  timeout: 180
+
+compliance:
+  risk_tier: standard
+  frameworks:
+    - mitre-atlas
+    - owasp-llm
+  data_governance:
+    pii_handling: redact
+    data_classification: confidential
+  recordkeeping:
+    audit_logging: true
+    log_format: structured_json
+  supervision:
+    human_in_the_loop: conditional
+    override_capability: true
+    kill_switch: true
+
+tags:
+  - developer-tools
+  - persistent-memory
+  - mcp
+  - knowledge-graph
+  - hybrid-search
+  - coding-agents
+  - zero-dependency
+
+metadata:
+  domain: "developer-tools"
+  category: "Developer Tools"
